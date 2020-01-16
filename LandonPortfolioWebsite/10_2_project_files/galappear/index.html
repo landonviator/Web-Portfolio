@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landon Viator</title>
+</head>
+<body class="grey lighten-4">
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo hide-on-small-and-down">Landon Viator</a>
+        <a href="#" data-activates="side-nav" class="button-collapse show-on-large right">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li class="active">
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="resume.html">Resume</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- Side nav -->
+        <ul id="side-nav" class="side-nav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="composition.html">Composition</a>
+          </li>
+          <li>
+            <a href="hardware.html">Hardware</a>
+          </li>
+          <li>
+            <a href="software.html">Software</a>
+          </li>
+          <li>
+            <a href="research.html">Research</a>
+          </li>
+          <li>
+            <a href="resume.html">Resume</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!--Section: Visitors-->
+
+<section class="blue-grey lighten-4 section-background-image">
+  <div class="row primary-overlay">
+        <div id="chartContainer"></div>
+  </div>
+</Section>
+
+<!--Section: Stats-->
+<section class="section-stats center">
+<div class="row">
+<div class="col s12 m6 13">
+<div class="card-panel white-text center">
+  <a href="composition.html" class="waves-effect">
+    <i class="material-icons category-icons medium">music_note</i>
+    <h5 class="white-text">Composition</h5>
+  </a>
+</div>
+</div>
+<div class="col s12 m6 13">
+  <div class="card-panel white-text center">
+    <a href="hardware.html" class="waves-effect">
+    <i class="material-icons category-icons medium">settings</i>
+    <h5 class="white-text">Hardware</h5>
+  </a>
+  </div>
+  </div>
+  <div class="col s12 m6 13">
+    <div class="card-panel white-text center">
+      <a href="software.html" class="waves-effect">
+      <i class="material-icons category-icons medium">devices</i>
+      <h5 class="white-text">Software</h5>
+    </a>
+    </div>
+    </div>
+    <div class="col s12 m6 13">
+      <div class="card-panel white-text center">
+        <a href="research.html" class="waves-effect">
+        <i class="material-icons category-icons medium">school</i>
+        <h5 class="white-text">Research</h5>
+      </a>
+      </div>
+      </div>
+</div>
+</section>
+
+<!--Footoer-->
+<footer class="section section-footer white-text center">
+  © 2020 Landon Viator
+</footer>
+
+<!--Section: Preloader-->
+
+<div class="preloader-wrapper big active loader">
+  <div class="spinner-layer spinner-blue-only">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+</div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+  <script src="js/chart.js"></script>
+  <script>
+    // Hide Sections
+    $('.section').hide();
+
+    setTimeout(function () {
+      $(document).ready(function () {
+        // Show sections
+        $('.section').fadeIn();
+
+        // Hide preloader
+        $('.loader').fadeOut();
+
+        //Init Side nav
+        $('.button-collapse').sideNav();
+
+        //Init Modals
+        $('.modal').modal();
+
+        //Init Select
+        $('.select').material_select();
+       
+
+        
+
+        
+
+        CKEDITOR.replace( 'body' );
+
+      });
+    }, 1000);
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landon Viator</title>
+</head>
+
+<body class="body-2">
+  <!-- Header -->
+  <header class="main-header-secondary">
+    <nav class="transparent nav-wrapper z-depth-0">
+      <div class="nav-wrapper">
+        <a href="#" data-activates="mobile-nav" class="button-collapse show-on-large">
+          <i class="material-icons">menu</i>
+        </a>
+        <a href="index.html" class="brand-logo"></a>
+        <ul class="right hide-on-med-and-down">
+          <li >
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="composition.html">Composition</a>
+          </li>
+          <li class="active">
+            <a href="hardware.html">Hardware</a>
+          </li>
+          <li>
+            <a href="software.html">Software</a>
+          </li>
+          <li>
+            <a href="research.html">Research</a>
+          </li>
+          <li>
+            <a href="resume.html">Resume</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="side-nav" id="mobile-nav">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="composition.html">Composition</a>
+        </li>
+        <li>
+            <a href="hardware.html">Hardware</a>
+          </li>
+        <li>
+          <a href="software.html">Software</a>
+        </li>
+        <li>
+          <a href="research.html">Research</a>
+        </li>
+        <li>
+          <a href="resume.html">Resume</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="center">Hardware</h1>
+  </header>
+
+  <section class="section section-main">
+    <div class="container">
+      <!--Row 1-->
+      <div class="row row-1">
+        <div class="col m6 hide-on-small-only">
+          <div class="img-content">
+            <h3>Hexapad</h3>
+            Check it out.
+          </div>
+        </div>
+        <div class="col m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/gallery/hexapad1.png" alt="">
+              <span class="card-title"></span>
+              <a href="#comp1" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger">
+                <i class="material-icons add-btn">add</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="row row-2">
+        <div class="col m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/gallery/hexapad2.jpg" alt="">
+              <span class="card-title"></span>
+              <a href="#comp2" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger">
+                <i class="material-icons add-btn">add</i>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col m6 hide-on-small-only">
+          <div class="img-content">
+            <h3></h3>
+            Continued...
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section page-footer-secondary">
+    <div class="container center">
+      © 2020 Landon Viator
+    </div>
+</footer>
+
+  <!-- Modal 1 -->
+  <div id="comp1" class="modal">
+    <div class="modal-content modal-background">
+      <h4>Hexapad</h4>
+      <img src="img/gallery/hexapad1.png" alt="" class="responsive-img"> 
+      My Hexapad Controller is a piezo-based microphone array. I intended for it to be used as a controller, like a MIDI controller, but for audio in many different types of applications as opposed to being used for one specific composition. It was constructed out of layers of acrylic and birch wood cut by a laser cutter and stacked layer after layer held together by screws; it is quite robust. (I have dropped it many times...)
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="comp2" class="modal">
+    <div class="modal-content modal-background">
+      <h4>Hexapad</h4>
+      <img src="img/gallery/hexapad2.jpg" alt="" class="responsive-img"> <br>
+      The Hexapad uses a total of 10 piezo microphones, each on their own mono channel that can be connected to with a ts/trs cable. This makes the Hexapad a 10-channel instrument! The piezos are distributed in the shape of hexagons for a concise arrangement. Each piezo is located under a neoprene pad about half an inch thick that helps isolate each piezo from the vibrations of adjacent piezos when struck. The neoprene pads also prevent direct contact with the piezos, as they can be quite sensitive and breakable, which prevents clicks and pops. It can be interacted with in any way imaginable, but I use my fingers to strike the pads like drum pads on a MIDI controller and by brushing the pads with combs and brushes; this gives very interesting audio signal that sound granular in nature. The Hexapad is great to use with MaxMSP to capture and manipulate the audio by DSP processes. In my case, I have used the pads to excite digital waveguides and loop pitch-shifted brush sounds.
+    </div>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Custom JS & jQuery here
+      //Init Side Nav
+      $('.button-collapse').sideNav(); 
+
+      //Init Modal
+      $('.modal').modal();
+
+      //Scroll Fire
+      const options = [
+        {
+          selector: '.row-1', offset: 50, callback: function(el){
+            Materialize.fadeInImage($(el));
+          }
+        },
+        {
+          selector: '.row-2', offset: 300, callback: function(el){
+            Materialize.fadeInImage($(el));
+          }
+        }
+      ]
+        Materialize.scrollFire(options);
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+@import './materialize';
+
+//Variables
+$header-bg: url(../img/pattern.png);
+$header-height: 300px;
+
+//Text Color Function
+@function set-text-color($color){
+    @if(lightness($color) > 50){
+        @return #000000;
+    } @else {
+        @return #ffffff;
+    }
+}
+
+.main-header{
+    //background: $header-bg;
+    color: #ffffff;
+    height: $header-height;
+    margin-bottom: 30px;
+
+    h1 {
+        margin: 0;
+        padding-top: 30px;
+    }
+}
+
+.main-header-secondary{
+    background: $header-bg;
+    color: #ffffff;
+    height: $header-height;
+    margin-bottom: 30px;
+
+    h1 {
+        margin: 0;
+        padding-top: 30px;
+    }
+}
+
+.primary-overlay {
+    background: rgba(45, 160, 168, 0.5);
+    //position: relative;
+    //top: 0;
+    //left: 0;
+    //width: 100%;
+    //height: 100%;
+    //overflow: hidden;
+  }
+
+.section-background-image{
+    background-image: url(../img/titleBackground.jpeg);
+    background-size: cover;
+    background-position: 50% 47%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    color: set-text-color($primary-color);
+}
+
+.body-2{
+background: $primary-color;
+color: set-text-color($primary-color);
+}
+
+.img-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    
+}
+
+.card-content{
+    color: $primary-color;
+}
+
+.page-footer{
+    background: $secondary-color;
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+}
+.page-footer-secondary{
+    background: $secondary-color;
+    bottom:0px;
+    width: 100%;
+}
+
+.modal{
+    color: #333333;
+}
+
+.row-1, .row-2, .row-3{
+    opacity: 0;
+}
+
+// .bio{
+//     font-size: 24px;
+//     color: #ffffff;
+// }
+
+.main-header .showcase {
+    padding-top: 150px;
+  }
+
+  .navbar{
+    background: $secondary-color;
+  }
+
+  .card-panel{
+    background: $secondary-color-light;
+    .category-icons{
+        color: $primary-color-light;
+    }
+  }
+
+  .add-btn{
+    background: $secondary-color-light;
+  }
+
+  .side-nav{
+      background: $secondary-color;
+  }
+  
+  .section-footer{
+    background: $secondary-color;
+  }
+
+  .loader{
+    position: absolute;
+    top: 40%;
+    left: 47%;
+}
+
+#chartContainer{
+    height: 600px;
+    width:  100%;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.resume-card{
+    background: $secondary-color;
+}
+
+.resume-content{
+    color: $secondary-color-bright;
+}
+
+
+.table-light{
+    background-color: $secondary-color-barely-light !important;
+}
+
+.modal-background{
+    background-color: $secondary-color !important;
+    color: $secondary-color-bright;
+}
+
+

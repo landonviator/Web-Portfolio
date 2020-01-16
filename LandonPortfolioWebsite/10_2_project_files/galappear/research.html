@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landon Viator</title>
+</head>
+
+<body class="body-2">
+  <!-- Header -->
+  <header class="main-header-secondary">
+    <nav class="transparent nav-wrapper z-depth-0">
+      <div class="nav-wrapper">
+        <a href="#" data-activates="mobile-nav" class="button-collapse show-on-large">
+          <i class="material-icons">menu</i>
+        </a>
+        <a href="index.html" class="brand-logo"></a>
+        <ul class="right hide-on-med-and-down">
+          <li >
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="composition.html">Composition</a>
+          </li>
+          <li>
+            <a href="hardware.html">Hardware</a>
+          </li>
+          <li>
+            <a href="software.html">Software</a>
+          </li>
+
+          <li class="active">
+            <a href="research.html">Research</a>
+          </li>
+          <li>
+            <a href="resume.html">Resume</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="side-nav" id="mobile-nav">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="composition.html">Composition</a>
+        </li>
+        <li>
+          <a href="hardware.html">Hardware</a>
+        </li>
+        <li>
+          <a href="software.html">Software</a>
+        </li>
+        <li>
+            <a href="research.html">Research</a>
+          </li>
+          <li>
+            <a href="resume.html">Resume</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+      </ul>
+    </nav>
+    <h1 class="center">Research</h1>
+  </header>
+
+
+  
+  <section class="section section-main">
+    <div class="container">
+      <!--Row 1-->
+      <!--First Item-->
+      <div class="row row-1">
+        <div class="col m6 hide-on-small-only">
+          <div class="img-content">
+            <h3>Chaos Theory in Audio Synthesis</h3>
+            Implementing chaotic oscillators.
+          </div>
+        </div>
+        <div class="col m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/gallery/hindmarshFigure.png" alt="">
+              <a href="#comp1" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger">
+                <i class="material-icons add-btn">add</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="row row-2">
+        <div class="col m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/gallery/chaoticString.png" alt="">
+              <a href="#comp2" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger">
+                <i class="material-icons add-btn">add</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col m6 hide-on-small-only">
+          <div class="img-content">
+            <h3>Chaos Theory in Audio Synthesis</h3>
+            Methods to incorporate chaotic equations in audio synthesis in a stable way - the chaotic string.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section page-footer-secondary">
+    <div class="container center">
+      © 2020 Landon Viator
+    </div>
+</footer>
+
+  <!-- Modal 1 -->
+  <div id="comp1" class="modal">
+    <div class="modal-content modal-background">
+      <h4>Hindmarsh-Rose</h4>
+      <img src="img/gallery/hindmarshFigure.png" alt="" class="responsive-img"> 
+      <br>
+      <br>
+      The Hindmarsh-Rose neural model is a continuous-time chaotic system. see James L Hindmarsh and RM Rose, “A model of neuronal bursting using three coupled irst order differential equations,”Proceedings of the Royal society of London. Series B. Biological sciences221, no.1222 (1984): 87–102.<br>
+      <br>
+
+      It was first described by Hindmarsh and Rose in 1982. This model is an adaptation of a previously described model by Fitzhugh. This model described the behavior of a brain cell discovered in a pond snail that when depolarized by a short pulse of current, an action potential (burst) was created with a short after potential decay; the cell does not fire indefinitely. To produce the behavior of the cell, the introduction of a small electrical current is used. A slow, increasing current causes adaptations in the cell, so the Hindmarsh-Rose model adds an adaptation current to the original equation. The Hindmarsh-Rose model is  described by the following differential equations:<br>
+      <br>
+      <p>
+        \[\dot{x} = y - ax^3 + bx^2 + I -z\]
+        \[\dot{y} = c - dx^2 - y\]
+        \[\dot{z} = r(s(x - x_1) - z)\]
+      </p>
+      <br>
+      <p>The image above is an x-y, oscilloscope rendering of the Hindmarsh-Rose system that I implemented in MaxMSP. The Hindmarsh-Rose chaotic equations were implemented in the gen environment in MaxMSP by finding numerical solutions to the above equations. Included is an audio sample of the oscillator with a specific set of conditions, but the possible timbrel range of this oscillator is infinitely large.<p>
+      
+    </div>
+    <audio controls>
+      <source src="./audio/hindmarshSampleMP3.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="comp2" class="modal">
+    <div class="modal-content modal-background">
+      <h4>Chaotic String</h4>
+            The chaotic string is a digital waveguide that uses the Hindmarsh-Rose oscillator as the noise source for the envelope. Injecting the chaotic oscillator inside of this synthesis engine in a modular way avoids the pit falls usually experienced by chaotic sound synthesis, like bifurcation or the system failing altogether when changing parameters. In this implementation, the oscillator is set at a stable value then used as a norse burst for the string model.<br>
+            <br>
+            The result of using this chaotic oscillator as the noise source for the digital waveguide is an interesting string sound sound that is ambient in nature and rich in high-end frequencies and harmonic saturation. It is a much more novel string sound than the standard digital waveguide sound.
+    </div>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Custom JS & jQuery here
+      //Init Side Nav
+      $('.button-collapse').sideNav(); 
+
+      //Init Modal
+      $('.modal').modal();
+
+      //Scroll Fire
+      const options = [
+        {
+          selector: '.row-1', offset: 50, callback: function(el){
+            Materialize.fadeInImage($(el));
+          }
+        },
+        {
+          selector: '.row-2', offset: 300, callback: function(el){
+            Materialize.fadeInImage($(el));
+          }
+        }
+      ]
+        Materialize.scrollFire(options);
+
+    });
+  </script>
+</body>
+
+</html>
